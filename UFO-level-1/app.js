@@ -1,20 +1,19 @@
-// Variable Declaration
+// Variable declared
 var tbody = d3.select("tbody");
 
 // From data.js
 var tableData = data;
 
-// Build Table
+// Build table
 function buildTable(data){
-    // Clear Existing Data
+    // Clear data
     tbody.html("");
-    // Loop Through Data
+    // Loop through data
     data.forEach((dataRow) => {
-        // Append Table Row to the Table Body 
+        // Append table row to table body
         var row = tbody.append("tr");
-        // Iterate Through Values
         Object.values(dataRow).forEach((val) => {
-            // Append a Cell to the Row for Each Value
+            // Append a cell to the row for each value
             var cell = row.append("td");
             cell.text(val);
         });
